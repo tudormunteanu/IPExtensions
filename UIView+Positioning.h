@@ -11,6 +11,11 @@
 @interface UIView (Positioning)
 
 - (void) setOrigin:(CGPoint)origin;
+
+//
+// Position an UIView relative to another UIView, at the right and 
+// starting from the same y.
+//
 - (void) setOriginAt:(CGPoint)distancePoint rightOfView:(UIView *)view;
 
 @end
