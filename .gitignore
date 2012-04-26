@@ -1,0 +1,11 @@
+*.pbxuser
+**build/
+*.swp
+**/*.pbxuser
+*.mode2v3
+*.mode1v3
+**/*.perspectivev*
+.DS_Store
+osx/
+**xcuserdata/
+*.xcworkspace
