@@ -10,12 +10,44 @@
 
 @interface UIView (Positioning)
 
-- (void) setOrigin:(CGPoint)origin;
+//
+// Adjusting positions and sizes of UIViews
+//
+- (void) alignRightWithMargin:(float)margin;
+- (void) adjustWidthTo:(float)width;
+- (void) adjustHeightTo:(float)height;
+- (void) adjustX:(CGFloat)x;
+- (void) adjustY:(CGFloat)y;
+- (void) expandHeightBy:(float)height;
+- (void) expandToBottom;
+- (void) expandWidth:(float)width;
+- (void) moveOriginTo:(CGPoint)origin;
+- (void) moveToPoint:(CGPoint)point;
+- (void) moveToPoint:(CGPoint)point offset:(CGSize)offset;
+- (void) moveXBy:(float)offset;
+- (void) moveYBy:(float)offset;
+- (void) moveToBottomWithMargin:(float)margin;
 
 //
-// Position an UIView relative to another UIView, at the right and 
-// starting from the same y.
+// Positioning UIViews relative to other UIViews
 //
-- (void) setOriginAt:(CGPoint)distancePoint rightOfView:(UIView *)view;
+- (void) moveOriginTo:(CGPoint)distancePoint rightOfView:(UIView *)view;
+- (void) appendToView:(UIView *)view margin:(float)margin;
+- (void) appendToView:(UIView *)view margin:(float)margin;
+- (void) addToRightOfView:(UIView *)view withMargin:(float)margin;
+
+
+//
+// Animations
+//
+- (void) showAnimated:(BOOL)animated completion:(void (^)(void))completionBlock;
+- (void) hideAnimated:(BOOL)animated completion:(void (^)(void))completionBlock;
+
+
+//
+// Information about UIViews
+//
+- (CGPoint) pointAfterFrameWithOffset:(CGSize)offset;
+- (float) bottom;
 
 @end
